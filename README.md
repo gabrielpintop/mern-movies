@@ -12,7 +12,7 @@ This application takes data from a movie data generated JSON and expose the info
 
 ## Important links
 
-**Deployed on:** 
+**Deployed on:** https://mern-movies.herokuapp.com/
 
 ## Used technologies
 
