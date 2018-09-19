@@ -5,12 +5,14 @@ This application takes data from a movie data generated JSON and expose the info
 - Gabriel Pinto
 
   **Personal web page:** https://glpinto10.github.io/gabriel-pinto-pineda/
+  
   **Email:** gl.pinto10@uniandes.edu.co
+  
   **Code:** 201515275
 
 ## Important links
 
-**Deployed on:** http://vpp.ineffableinventions.com.co/
+**Deployed on:** 
 
 ## Used technologies
 
