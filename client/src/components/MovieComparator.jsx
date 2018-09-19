@@ -21,17 +21,18 @@ class MovieComparator extends Component {
 
   showComparedMovies() {
     let comparedMovies = [];
-    this.state.movies.forEach(movie => {
-      console.log(movie);
+
+    for (let index = 0; index < this.state.movies.length; index++) {
+      const movie = this.state.movies[index];
       comparedMovies.push(
         <div
           className="col-6  d-flex align-items-stretch"
           key={movie.title + movie.rating}
         >
-          <GeneralComparedMovie movie={movie} />
+          <GeneralComparedMovie movie={movie} pos={index} />
         </div>
       );
-    });
+    }
 
     return comparedMovies;
   }

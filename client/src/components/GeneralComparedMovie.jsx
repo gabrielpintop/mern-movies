@@ -8,12 +8,13 @@ class GeneralComparedMovie extends Component {
     this.pos = this.props.pos;
   }
 
-  winner(val) {
-    if (val === 0) {
+  winner() {
+    console.log(this.pos);
+    if (this.pos === 0) {
+      return <h1 className="text-center bg-success text-light">WINNER</h1>;
+    } else {
       return (
-        <h1>
-          <span class="badge badge-btn-primary">WINNER</span>
-        </h1>
+        <h1 className="text-center bg-primary text-light">{this.pos + 1}</h1>
       );
     }
   }
@@ -21,7 +22,7 @@ class GeneralComparedMovie extends Component {
   render() {
     return (
       <div className="card w-100 shadow mb-5">
-        {this.winner(this.pos)}
+        {this.winner()}
         <img
           className="card-img-top"
           src={this.movie.poster}
