@@ -1,0 +1,43 @@
+{
+  "name": "vpp-colombia",
+  "version": "1.0.0",
+  "author": "Gabriel Pinto",
+  "license": "MIT",
+  "description": "Example of MERN app made by Gabriel Pinto Pineda",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "engines": {
+    "node": "8.11.1"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
+  "keywords": [
+    "MongoDB",
+    "React JS",
+    "Express",
+    "Node JS"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glpinto10/mern-movies.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.6",
+    "mongoose": "^5.2.12"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
