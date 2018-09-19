@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Movies from './Movies';
-import MovieComparator from './MovieComparator';
+import MovieSelector from './MovieSelector';
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <MovieComparator />
+        <MovieSelector />
         <hr />
         <Movies />
       </div>
