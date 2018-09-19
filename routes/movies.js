@@ -11,7 +11,7 @@ module.exports = router => {
 
   // Get all movies. Limit 20 with pagination
   router.get("/movies/:page", (req, res) => {
-    let skip = req.params.page * 20;
+    let skip = req.params.page * 30;
     MongoClient.connect(config.uri, {
       useNewUrlParser: true
     }, (err, client) => {
@@ -27,7 +27,7 @@ module.exports = router => {
 
         moviesC.find().sort({
           movieTitle: 1
-        }).skip(skip).limit(20).toArray((err, movs) => {
+        }).skip(skip).limit(30).toArray((err, movs) => {
           if (err) {
             res.json({
               success: false,
@@ -52,7 +52,7 @@ module.exports = router => {
   });
 
   // Get movie by title
-  router.get("/movies/title/:title", (req, res) => {
+  router.get("/movie/title/:title", (req, res) => {
     let title = req.params.title.replace(/_/g, " ");
 
     MongoClient.connect(config.uri, {
@@ -70,7 +70,7 @@ module.exports = router => {
       let moviesC = db.collection('movies');
 
       moviesC.findOne({
-        movieTitle: title
+        title: title
       }).then((mov) => {
         if (!mov) {
           res.json({
@@ -94,9 +94,11 @@ module.exports = router => {
     let body = req.body;
     let title = body.title;
     let genre = body.genre;
-    let year = body.year;
+    let year = body.releaseYear;
     let director = body.director;
-    let image = body.image;
+    let country = body.country;
+    let rating = body.rating;
+    let poster = body.poster;
 
     if (!title) {
       res.json({
@@ -118,10 +120,20 @@ module.exports = router => {
         success: false,
         message: 'The movie must have a director'
       });
-    } else if (!image) {
+    } else if (!country) {
       res.json({
         success: false,
-        message: 'The movie must have an image'
+        message: 'The movie must have a country'
+      });
+    } else if (!rating) {
+      res.json({
+        success: false,
+        message: 'The movie must have a rating'
+      });
+    } else if (!poster) {
+      res.json({
+        success: false,
+        message: 'The movie must have a poster'
       });
     } else {
 
@@ -139,11 +151,13 @@ module.exports = router => {
           let moviesC = db.collection('movies');
 
           let newMovie = {
-            movieTitle: title,
-            movieGenre: genre,
-            movieYear: year,
-            movieDirector: director,
-            movieImage: image
+            title: title,
+            genre: genre,
+            releaseYear: year,
+            director: director,
+            country: country,
+            rating: rating,
+            poster: poster
           };
 
           moviesC.insertOne(newMovie, (error, response) => {

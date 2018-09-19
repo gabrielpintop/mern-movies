@@ -1,20 +1,3 @@
-.opciones {
-    max-height: 200px;
-    overflow-y: scroll;
-}
-
-.dropdown-menu {
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.dropdown-menu-center {
-    left: 50% !important;
-    right: auto !important;
-    text-align: center !important;
-    transform: translate(-50%, 0) !important;
-}
-
 .pointer {
     cursor: pointer;
 }
@@ -27,56 +10,10 @@ html {
     overflow-x: hidden;
 }
 
-.letra-pequenia {
-    font-size: 12px;
+.bg-dark-blue {
+    background-color: darkblue;
 }
 
-
-
-@media(min-width: 768px) {
-    .borde-comentario {
-        border-right: 3px solid gray;
-    }
-}
-
-@media(max-width: 767px) {
-    .borde-comentario {
-        border-bottom: 3px solid gray;
-    }
-}
-
-#fb-share-button {
-    background: #3b5998;
-    border-radius: 3px;
-    font-weight: 600;
-    padding: 5px 8px;
-    display: inline-block;
-    position: static;
-}
-
-#fb-share-button:hover {
-    cursor: pointer;
-    background: #213A6F
-}
-
-#fb-share-button svg {
-    width: 18px;
-    fill: white;
-    vertical-align: middle;
-    border-radius: 2px
-}
-
-#fb-share-button span {
-    vertical-align: middle;
-    color: white;
-    font-size: 14px;
-    padding: 0 3px
-}
-
-.fuente-normal {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.proyecto-general:hover {
-    transform: scale(1.04);
+.raleway {
+    font-family: 'Raleway', sans-serif;
 }

@@ -1,22 +1,33 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import NavBar from './components/NavBar.jsx';
-import Movies from './components/Movies';
-import MovieDetail from './components/MovieDetail';
+import Home from './components/Home';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
-        <div className="bg-primary shadow text-light">
-          <h1 className="text-center mt-3">MERN Movies</h1>
+        <div className="bg-dark-blue shadow text-light">
+          <br />
+          <h1 className="text-center">MERN MOVIES</h1>
+          <h5 className="text-center raleway">
+            By{' '}
+            <i>
+              <a
+                href="https://glpinto10.github.io/gabriel-pinto-pineda/"
+                className="text-light"
+                target="blank"
+              >
+                Gabriel Pinto Pineda
+              </a>
+            </i>
+            <br />
+            <br />
+          </h5>
         </div>
         <div className="container container-fluid mb-5">
-          <Route exact path="/" component={Movies} />
+          <Route exact path="/" component={Home} />
           <Switch>
-            <Route exact path="/movies" component={Movies} />
-            <Route path="/movies/:title" component={MovieDetail} />
+            <Route exact path="/movies" component={Home} />
           </Switch>
         </div>
       </div>
