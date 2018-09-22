@@ -31,7 +31,7 @@ Some other dependencies are used such as:
 - React-router-dom
 - Bootstrap
 
-Finally, the application is deployed on https://heroku.com/ and can be accesed by this link: 
+Finally, the application is deployed on https://heroku.com/ and can be accesed by this link: https://vega-embed.herokuapp.com/
 
 ## Instructive for execution
 
@@ -49,7 +49,6 @@ It is neccesary for using the app of a local way. You can download MongoDB from 
 
 0) Clone or download the repository.
 1) Run MongoDB. Enter to the the place where MongoDB was installed using the CMD, and run "mongod" (it is typically on the bin folder), make sure it is connected to the port 27017.
-1.1) Load data. Open a CMD on the folder on the folder of MongoDB (bin) and run the following command "mongoimport --db mernmoviesdb --collection movies --file "C:\PATH_TO_REPO\mern-movies\resources\json\movies_data.json" --jsonArray". Replace the "PATH_TO_REPO" to whith the directory in which the project is located.
 2) Open the root foled on a CMD.
 3) Run "npm install" and then "npm start". The back server runs on http://localhost:8080
 5) Open a CMD on the root folder and access to the "client" folder.
