@@ -2,7 +2,7 @@
 This application takes data from a movie data generated JSON and expose the information of a cool and interesting way. 
 
 ## Created by
-- Gabriel Pinto
+- Gabriel Pinto Pineda
 
   **Personal web page:** https://glpinto10.github.io/gabriel-pinto-pineda/
   
